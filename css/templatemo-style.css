@@ -87,8 +87,8 @@ http://www.templatemo.com/tm-521-get-ready
   }
 
   .overlay {
-    background: linear-gradient(to top right, #d2b48c, #000000);
-    opacity: 0.9;
+    background: linear-gradient(135deg, #0d2137 0%, #1a4d6e 40%, #0d2137 100%);
+    opacity: 0.92;
     position: absolute;
     top: 0;
     right: 0;
@@ -371,7 +371,119 @@ http://www.templatemo.com/tm-521-get-ready
     margin: 10px 0;
   }
 
+  .cognipie-logo {
+    font-size: 3em;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+  }
 
+  .tagline {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1em;
+    margin: 0.3em 0;
+    letter-spacing: 0.15em;
+  }
+
+  .subtagline {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95em;
+    margin-bottom: 1.5em;
+  }
+
+  .launch-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin-bottom: 1.2em;
+  }
+
+  /*---------------------------------------
+     ABOUT US
+  -----------------------------------------*/
+
+  #about.about-section {
+    background: #1a1a1a;
+    padding: 80px 0 100px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 1em;
+    font-weight: 300;
+  }
+
+  .about-lead {
+    color: #b0b0b0;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3em;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .about-lead strong {
+    color: #29ca8e;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 3em;
+  }
+
+  .about-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .about-card:hover {
+    background: rgba(41, 202, 142, 0.08);
+    border-color: rgba(41, 202, 142, 0.3);
+  }
+
+  .about-card i {
+    color: #29ca8e;
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .about-card h3 {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin: 0 0 10px;
+    font-weight: 400;
+  }
+
+  .about-card p {
+    color: #909090;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .about-footer {
+    color: #808080;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-footer strong {
+    color: #29ca8e;
+  }
 
   /*---------------------------------------
      SOCIAL ICON              
@@ -443,6 +555,10 @@ http://www.templatemo.com/tm-521-get-ready
       font-size: 1.50em;
     }
 
+    .cognipie-logo {
+      font-size: 2.2em;
+    }
+
     .menu-items {
       margin: 100px 0;
     }
@@ -453,5 +569,19 @@ http://www.templatemo.com/tm-521-get-ready
 
     .countdown h3 {
       font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .cognipie-logo {
+      font-size: 2.4em;
+    }
+
+    .about-section {
+      padding: 50px 0 70px;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
     }
   }

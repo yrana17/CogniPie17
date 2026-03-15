@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognipi - Coming Soon</title>
+    <link rel="icon" type="image/png" href="images/your-favicon.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* Choose a suitable background color */
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #logo {
+            width: 150px; /* Adjust logo size as needed */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .launch-date {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #777;
+        }
+
+        #countdown {
+            font-size: 2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        #countdown div {
+            margin: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: #007bff; /* Choose a suitable action color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="logo" src="images/your-logo.png" alt="Cognipi Logo">
+
+        <h1>Cognipi is Coming!</h1>
+        <h2>Your Hub for Test Automation, Security, & Testing</h2>
+
+        <p class="launch-date">Launching on April 1st, 2024</p>
+
+        <div id="countdown">
+            <div><span id="days"></span> Days</div>
+            <div><span id="hours"></span> Hours</div>
+            <div><span id="minutes"></span> Minutes</div>
+            <div><span id="seconds"></span> Seconds</div>
+        </div>
+
+        <div class="description">
+            <p>We're building a vibrant community with insightful blogs, expert training, interactive events, and live projects focused on advancing your skills in test automation and security testing.</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <button type="submit">Notify Me</button>
+        </form>
+
+        <footer>
+            <p>&copy; 2024 Cognipi. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const launchDate = new Date("April 1, 2024 00:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "We're Live!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

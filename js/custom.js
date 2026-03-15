@@ -14,15 +14,15 @@
       $('.menu-burger').text() == "☰" ? $('.menu-burger').text('✕') : $('.menu-burger').text('☰');
     });
 
-
-    // ABOUT SLIDER
-    $('body').vegas({
-        slides: [
-            { src: 'images/slide-image01.jpg' },
-            { src: 'images/slide-image02.jpg' }
-        ],
-        timer: false,
-        transition: [ 'zoomOut', ]
+    // Close menu when a nav link is clicked (e.g. Home, About Us)
+    $('.menu-items a[href^="#"]').on('click', function() {
+      $('.menu-bg, .menu-items, .menu-burger').removeClass('fs');
+      $('.menu-burger').text('☰');
     });
+
+
+    // Hero background: using overlay gradient only (no slide images)
+    // Add your own images later via Vegas if needed:
+    // $('body').vegas({ slides: [{ src: 'images/slide1.jpg' }, { src: 'images/slide2.jpg' }], timer: false });
 
 })(jQuery);
